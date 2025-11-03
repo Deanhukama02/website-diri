@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Saya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        header {
+            background: #1f1f1f;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding-bottom: 4px;
+            border-bottom: 3px solid transparent;
+        }
+        nav a:hover, nav a:focus {
+            color: #ffb74d;
+            border-bottom: 3px solid #ffb74d;
+            outline: none;
+        }
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            background: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            text-align: center;
+            color: #ffb74d;
+            margin: 1rem 0 2rem 0;
+            font-weight: 600;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 0 8px #000;
+        }
+        th, td {
+            padding: 0.8rem 1rem;
+            border: 1px solid #333;
+            text-align: left;
+            color: #ddd;
+        }
+        th {
+            background: #ffb74d;
+            color: #222;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        a.demo-link {
+            color: #ffb74d;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        a.demo-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        /* Responsive Table */
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                display: none;
+            }
+            tr {
+                margin-bottom: 1.5rem;
+                border-bottom: 2px solid #444;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+                border-radius: 10px;
+                background: #292929;
+            }
+            td {
+                padding-left: 50%;
+                position: relative;
+                text-align: right;
+                font-size: 0.9rem;
+            }
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 15px;
+                width: 45%;
+                padding-left: 0.75rem;
+                font-weight: 600;
+                color: #ffb74d;
+                text-align: left;
+            }
+            td:last-child {
+                border-bottom: none;
+            }
+        }
+        footer {
+            background: #1a1a1a;
+            color: #bbb;
+            text-align: center;
+            padding: 1.5rem 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #ffb74d;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }      
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Kontak</a>
+        </nav>
+    </header>
+
+    <main class="container" aria-label="Daftar Portfolio Proyek">
+        <h1>Data Portfolio Proyek</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Proyek</th>
+                    <th>Tahun Pembuatan</th>
+                    <th>Teknologi</th>
+                    <th>Status</th>
+                    <th>Link Demo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Nama Proyek">Website Toko Online</td>
+                    <td data-label="Tahun Pembuatan">2023</td>
+                    <td data-label="Teknologi">HTML, CSS, JavaScript</td>
+                    <td data-label="Status">Selesai</td>
+                    <td data-label="Link Demo"><a href="#" target="_blank" class="demo-link">Demo</a></td>
+                </tr>
+                <tr>
+                    <td data-label="Nama Proyek">Aplikasi Manajemen Inventaris</td>
+                    <td data-label="Tahun Pembuatan">2024</td>
+                    <td data-label="Teknologi">React, Node.js</td>
+                    <td data-label="Status">Belum</td>
+                    <td data-label="Link Demo">-</td>
+                </tr>
+                <tr>
+                    <td data-label="Nama Proyek">Sistem Absensi Karyawan</td>
+                    <td data-label="Tahun Pembuatan">2023</td>
+                    <td data-label="Teknologi">Python, Flask</td>
+                    <td data-label="Status">Selesai</td>
+                    <td data-label="Link Demo"><a href="#" target="_blank" class="demo-link">Demo</a></td>
+                </tr>
+                <tr>
+                    <td data-label="Nama Proyek">Portfolio Website</td>
+                    <td data-label="Tahun Pembuatan">2025</td>
+                    <td data-label="Teknologi">HTML, CSS, JavaScript</td>
+                    <td data-label="Status">Selesai</td>
